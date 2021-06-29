@@ -1,0 +1,39 @@
+<div class="flex-container">
+  <ng-container *ngFor="let dashboardStock of stocks; let i = index">
+    <div
+      class="stock-content flex-container"
+      [ngClass]="{
+        red: i % 2 === 0,
+        green: i % 2 === 1,
+        disabled: dashboardStock.disabled
+      }"
+    >
+      <app-stock-price [stock]="dashboardStock.stock"></app-stock-price>
+      <div class="form-check form-switch toggle">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="stockState"
+          (change)="updateDisabledStockState($event, dashboardStock)"
+          [ngClass]="{
+            checked: !dashboardStock.disabled
+          }"
+          [checked]="!dashboardStock.disabled"
+          [style.backgroundColor]="dashboardStock.disabled ? '#c0c0c1' : '#17442d'"
+          [style.width]="'70px'"
+        />
+        <label
+          class="form-check-label"
+          [ngClass]="{
+            red: i % 2 === 0,
+            green: i % 2 === 1,
+            disabled: dashboardStock.disabled,
+            checked: !dashboardStock.disabled
+          }"
+          for="flexSwitchCheckDefault"
+          >{{ dashboardStock.disabled ? "OFF" : "ON" }}</label
+        >
+      </div>
+    </div>
+  </ng-container>
+</div>

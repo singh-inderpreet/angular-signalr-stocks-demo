@@ -1,0 +1,9 @@
+<div class="flex-container">
+    <div class="container title fw-bolder">{{ stock.name }}</div>
+    <div class="container fw-bold">{{ stock.currency + stock.price }}</div>
+    <div class="container label">{{ (stock.change > 0 ? '+' : '') + stock.change }}</div>
+    <div class="container">({{ (stock.change > 0 ? '+' : '') + stock.changePercentage + '%' }})</div>
+    <div class="container label fw-bold">LAST TRADE</div>
+    <div class="container">{{ stock.date }}</div>
+    <div class="container">VOL - {{ stock.volume }}</div>
+</div>

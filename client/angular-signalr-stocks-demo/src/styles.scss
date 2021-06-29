@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+/* Importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/* Importing Custom Variables */
+@import './app/styles/vars.scss';
+
+html *
+{
+   color: #000 !important;
+   font-family: 'Roboto', sans-serif;
+}

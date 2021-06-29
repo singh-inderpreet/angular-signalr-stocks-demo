@@ -1,0 +1,57 @@
+@import '../../styles/vars.scss';
+
+:host {
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    .stock-content {
+      width: 180px;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+      position: relative;
+      &.red {
+        background-color: $red-color;
+      }
+      &.green {
+        background-color: $green-color;
+      }
+      &.disabled {
+        background-color: $disabled-color;
+      }
+      > .toggle {
+        font-size: 30px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        user-select: none;
+        label {
+          position: absolute;
+          font-size: 15px;
+          top: 30%;
+          font-weight: 600;
+          right: 18%;
+          color: #fff !important;
+          pointer-events: none;
+          &.red {
+            color: $red-color !important;
+          }
+          &.green {
+            color: $green-color !important;
+          }
+          &.disabled {
+            color: $disabled-color !important;
+          }
+          &.checked {
+            left: 20%;
+          }
+        }
+      }
+      @media only screen and (max-width: 400px) {
+        width: 80%;
+        margin: 10px auto;
+      }
+    }
+  }
+}

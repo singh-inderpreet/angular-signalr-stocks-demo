@@ -1,0 +1,6 @@
+test/
+angular-signalr-stocks-demo/node_modules
+.vs
+server/.vs
+server/Stock_Server/bin
+
